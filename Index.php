@@ -1,1 +1,1 @@
-<html>Bosco Bosco</html>
+<html>Bosco is an idiot Bosco</html>

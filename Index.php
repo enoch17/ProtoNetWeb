@@ -1,1 +1,1 @@
-<html>Bosco kun is a rich man</html>
+<html>Bosco kuna is a rich man</html>

@@ -23,7 +23,7 @@ function loginUser($username,$password)
     $password = mysqli_real_escape_string($db,$password);
     $query = "SELECT * FROM users_tb ";
     $password = md5($password);
-    $query .= " WHERE username = '$username' AND password = '$password'";
+    $query .= " WHERE Username = '$username' AND Password = '$password'";
     $result = mysqli_query($db, $query);
     if(!$result)
     {

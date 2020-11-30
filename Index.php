@@ -15,7 +15,9 @@ require "includes/loginprocessing.php";
             <form action="Index.php" method="post">
                 <img src="img/">
                 <h1 class="title">
-                    <font size="7" ; face="calibri">welcome
+                      <p style="color: orange; text-align: center">
+                          <font size="15" ; face="calibri">welcome</font>
+                    </p>
 
                     </font>
                 </h1>

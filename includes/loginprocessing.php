@@ -1,10 +1,9 @@
 <?php
 require "connection.php";
-if(isset($_POST['ctLogin'])){formValidation("ct");}
-if(isset($_POST['adLogin'])){formValidation("ad");}
+if(isset($_POST['Login'])){formValidation();}
 if(isset($_POST['logoutUser'])){logOut();}
 
-function formValidation(string $type)
+function formValidation()
 {
     $username =$_SESSION['username'] = $_REQUEST['username'];
     $password = $_REQUEST['password'];
@@ -14,16 +13,15 @@ function formValidation(string $type)
     }
     else
     {
-        if($type == "ct"){loginCustomer($username,$password);};
-        if($type == "ad"){loginAdmin($username,$password);};
+        loginUser($username,$password);
     }
 }
-function loginCustomer($username,$password)
+function loginUser($username,$password)
 {
     global $db;
     $username = mysqli_real_escape_string($db,$username);
     $password = mysqli_real_escape_string($db,$password);
-    $query = "SELECT * FROM customer_tb ";
+    $query = "SELECT * FROM users_tb ";
     $password = md5($password);
     $query .= " WHERE username = '$username' AND password = '$password'";
     $result = mysqli_query($db, $query);
@@ -36,8 +34,15 @@ function loginCustomer($username,$password)
         $count = mysqli_num_rows($result);
         if($count == 1)
         {
-            header("Location: ./pages/customer/dashboard.php", true, 301);
-            exit();   
+            $details = mysqli_fetch_assoc($result);
+            $type = $details['Type'];
+            if($type == "Customer")
+            {
+                header("Location: ./pages/customer/dashboard.php", true, 301);
+            }
+            else{
+                header("Location: ./pages/admin/dashboard.php", true, 301);
+            }
         }
         else
         {
@@ -45,5 +50,11 @@ function loginCustomer($username,$password)
         }
         mysqli_free_result($result);
     }
+}
+
+function logOut()
+{
+    session_destroy();
+    header("Location: ./Index.php", true, 301);
 }
 ?>

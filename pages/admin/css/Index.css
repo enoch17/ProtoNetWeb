@@ -1,7 +1,7 @@
 /* RESET RULES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 @import url("https://fonts.googleapis.com/css?family=Lato:400,700&display=swap");
-
+/* * { border: 1px solid red; } */
 :root {
   --page-header-bgColor: #242e42;
   --page-header-bgColor-hover: #1d2636;
@@ -233,7 +233,7 @@ body {
 
 
 .btn-group button:hover {
-  background-color: blue;
+  background-color: rgb(63, 48, 97);
 }
 
 .search-and-user input[type="search"] {
@@ -265,7 +265,7 @@ body {
 }
 
 .search-and-user .admin-profile {
-    padding-left: 70%;
+  padding-left: 80%;
   display: flex;
   align-items: center;
 }
@@ -450,6 +450,13 @@ body {
   }
 }
 
+td{
+  padding : 2%;
+}
+
+button{
+  border-radius: 5%;
+}
 
 /* FOOTER
 –––––––––––––––––––––––––––––––––––––––––––––––––– */

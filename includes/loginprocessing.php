@@ -1,5 +1,4 @@
 <?php
-require "connection.php";
 if(isset($_POST['Login'])){formValidation();}
 if(isset($_POST['logoutUser'])){logOut();}
 
@@ -55,6 +54,6 @@ function loginUser($username,$password)
 function logOut()
 {
     session_destroy();
-    header("Location: ./Index.php", true, 301);
+    header("Location: ../Index.php", true, 301);
 }
 ?>

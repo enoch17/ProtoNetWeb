@@ -1,12 +1,11 @@
 <?php
     session_start();
-    $_SESSION["error"] = "";
-    $_SESSION["username"] = "";
     $dbhost = "localhost";
     $dbuser = "root";
     $dbpass = "";
     $dbname = "prontonet_db";
-    
+    $_SESSION["error"];
+    $_SESSION["username"];
     $db = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
     if(mysqli_connect_errno()){
         $e = "Database connection failed: ". 

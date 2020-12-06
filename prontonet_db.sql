@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 30, 2020 at 10:21 AM
+-- Generation Time: Dec 06, 2020 at 10:57 PM
 -- Server version: 10.4.16-MariaDB
 -- PHP Version: 7.4.12
 
@@ -35,6 +35,15 @@ CREATE TABLE `bundles_tb` (
   `Duration` int(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `bundles_tb`
+--
+
+INSERT INTO `bundles_tb` (`BundleId`, `Name`, `Description`, `BundleSize`, `Duration`) VALUES
+('1', 'MiniBundle', 'FirstBundle', '30', 30),
+('2', 'MegaBundle', 'Second Bundle', '60', 90),
+('3', 'UltraBundle', 'Third Bundle', '120', 120);
+
 -- --------------------------------------------------------
 
 --
@@ -50,6 +59,13 @@ CREATE TABLE `customers_tb` (
   `PhoneNo` varchar(12) NOT NULL,
   `CurrentBundleId` varchar(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `customers_tb`
+--
+
+INSERT INTO `customers_tb` (`Username`, `LastName`, `FirstName`, `Email`, `Address`, `PhoneNo`, `CurrentBundleId`) VALUES
+('enoch17', 'Omolere', 'Enoch', 'enochomolere1@gmail.', 'University Of Ghana', '(703) 873-83', '1');
 
 -- --------------------------------------------------------
 
@@ -93,7 +109,8 @@ CREATE TABLE `users_tb` (
 --
 
 INSERT INTO `users_tb` (`Username`, `Password`, `Type`) VALUES
-('admin1', 'e10adc3949ba59abbe56e057f20f883e', 'Admin');
+('admin1', 'e10adc3949ba59abbe56e057f20f883e', 'Admin'),
+('enoch17', 'e10adc3949ba59abbe56e057f20f883e', 'Customer');
 
 --
 -- Indexes for dumped tables

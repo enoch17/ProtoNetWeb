@@ -1,25 +1,51 @@
 <?php
-require "connection.php";
 $Bundles = $Customers = $ActiveCustomers = $InActiveCustomers =[];
+if(isset($_POST['CreateCustomer'])){CreateCustomer();}
 function CreateCustomer()
 {
     //Validation
+    $username =$_SESSION['cusername'] = $_REQUEST['username'];  
+    $password =$_SESSION['cpassword'] = $_REQUEST['password'];
+    $firstname = $_SESSION['cfirstname'] = $_REQUEST['firstname'];
+    $lastname = $_SESSION['clastname'] = $_REQUEST['lastname'];
+    $address =$_SESSION['caddress'] = $_REQUEST['address'];
+    $email = $_SESSION['cemail'] = $_REQUEST['email'];
+    $phoneNo = $_SESSION['cphoneNo'] = $_REQUEST['phoneNo'];
+    $bundle = $_SESSION['cbundle'] = $_REQUEST['bundle'];
+    $CtSessions = array($_SESSION['cusername'],$_SESSION['cpassword'],$_SESSION['cfirstname'],
+    $_SESSION['clastname'],$_SESSION['caddress'],$_SESSION['cemail'],$_SESSION['cphoneNo'],$_SESSION['cbundle'],);
+    if(!filter_var($email, FILTER_VALIDATE_EMAIL))
+    {
+        $_SESSION["error"] = "Email is invalid";
+        echo "<script>document.getElementsByName(email).style.border = '1px solid red';</script>";
+        $_SESSION['cemail'] = "";
+    }
+    else if(preg_match("/^[a-zA-Z-' ]*$/",$phoneNo))
+    {
+        $_SESSION['error'] = "Only Numbers allowed for Phone Number";
+        $_SESSION['cphoneNo']="";   
+    }
+    else
+    {
     global $db;
     $type = "Customer";
     // $username $password 
     // $username $type $lastname $firstname $email $address $phoneNo $currentBundleId
-    $_SESSION = $username;
+    ///remember ti hash passwords
+    $password = md5($password);
+    if($bundle == "0"){$bundle="--";}
     $query = "INSERT INTO users_tb (Username,Password,Type) VALUES('$username','$password','$type')";
     $result = mysqli_query($db, $query);
     if(!$result)
     {
         $_SESSION['error']= "Username in Use";
-        echo "Username in use";
+        unset($_SESSION['cusername']);
+        $_SESSION['cusername']="";
     }
     else
     {
         $query = "INSERT INTO customers_tb (Username,LastName,FirstName,Email,Address,PhoneNo,CurrentBundleId) 
-        VALUES('$username','$lastname','$firstname','$email','$address','$phoneNo','$currentBundleId')";
+        VALUES('$username','$lastname','$firstname','$email','$address','$phoneNo','$bundle')";
         $result = mysqli_query($db, $query);
         if(!$result)
         {
@@ -29,9 +55,10 @@ function CreateCustomer()
         }
         else
         {
-            $_SESSION['error'] = "Success";
+            $_SESSION['error'] = "Successful";
+            $_SESSION['cusername']=$_SESSION['cpassword']=$_SESSION['cfirstname']=$_SESSION['clastname']=$_SESSION['caddress']=$_SESSION['cemail']=$_SESSION['cphoneNo']=$_SESSION['cbundle']="";   
         }
-    }
+    }}
 }
 
 function ViewCustomers()
@@ -122,7 +149,7 @@ function ViewBundles()
     $result = mysqli_query($db, $query);
     if(!$result)
     {
-        $_SESSION["error"] = "Error Retrieving";
+        $_SESSION["error"] = "Error Retrieving Bundles";
     }
     else
     {
@@ -134,7 +161,6 @@ function ViewBundles()
             $Bundles[$i] =$details;
             $i = $i +1;
         }
-        // echo $Bundles[0]['BundleId'];
     }
 } 
 ?>

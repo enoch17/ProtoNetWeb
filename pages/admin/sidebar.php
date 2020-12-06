@@ -14,7 +14,7 @@
         <h3>Admin</h3>
       </li>
       <li>
-        <a href="#0">
+        <a href="createcustomer.php">
           <svg>
             <use xlink:href="#pages"></use>
           </svg>

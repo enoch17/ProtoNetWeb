@@ -1,5 +1,6 @@
 <?php
 $Bundles = $Customers = $ActiveCustomers = $InActiveCustomers =[];
+$_SESSION['cusername']=$_SESSION['cpassword']=$_SESSION['cfirstname']=$_SESSION['clastname']=$_SESSION['caddress']=$_SESSION['cemail']=$_SESSION['cphoneNo']=$_SESSION['cbundle']="";
 if(isset($_POST['CreateCustomer'])){CreateCustomer();}
 function CreateCustomer()
 {

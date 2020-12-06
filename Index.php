@@ -1,7 +1,6 @@
 <?php 
-require "includes/connection.php";
-require "includes/loginprocessing.php";
-$_SESSION["error"]=$_SESSION["username"]="";
+require_once "includes/connection.php";
+require_once "includes/loginprocessing.php";
 ?>
 <!DOCTYPE html>
 <html>

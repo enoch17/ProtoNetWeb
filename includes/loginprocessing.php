@@ -1,4 +1,5 @@
 <?php
+$_SESSION["error"]=$_SESSION["username"]="";
 if(isset($_POST['Login'])){formValidation();}
 if(isset($_POST['logoutUser'])){logOut();}
 

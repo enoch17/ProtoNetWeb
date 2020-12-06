@@ -1,6 +1,7 @@
 <?php 
 require "includes/connection.php";
 require "includes/loginprocessing.php";
+$_SESSION["error"]=$_SESSION["username"]="";
 ?>
 <!DOCTYPE html>
 <html>

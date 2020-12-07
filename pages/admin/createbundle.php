@@ -9,11 +9,11 @@ ViewBundles();
 <div id="login-box">
     <div class="left">
         <h1>CREATE BUNDLE</h1>
-        <form method="post" action="createcustomer.php">
-            <input type="text" name="bundlename" placeholder="Bundle Name" value="<?php echo $_SESSION['cbundlename']?>" required/>
-            <input type="text" name="bundlesize" placeholder="Bundle Size" value="<?php echo $_SESSION['cbundlesize']?>" required/>
-            <input type="text" name="description" placeholder="Description" value="<?php echo $_SESSION['cdescription']?>" required/>
-            <input type="text" name="Duration" placeholder="Duration" value="<?php echo $_SESSION['cduration']?>" required/>
+        <form method="post" action="createbundle.php">
+            <input type="text" name="bundlename" placeholder="Bundle Name" value="<?php echo $_SESSION['bundlename']?>" required/>
+            <input type="text" name="bundlesize" placeholder="Bundle Size" value="<?php echo $_SESSION['bundlesize']?>" required/>
+            <input type="text" name="description" placeholder="Description" value="<?php echo $_SESSION['description']?>" required/>
+            <input type="text" name="duration" placeholder="Duration in Days" value="<?php echo $_SESSION['duration']?>" required/>
            
 
             <p id="Error"><?php if($_SESSION['error']!="Successful"){echo $_SESSION['error'];}?></p>

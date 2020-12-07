@@ -1,7 +1,9 @@
 <?php
 $Bundles = $Customers = $ActiveCustomers = $InActiveCustomers =[];
 $_SESSION['cusername']=$_SESSION['cpassword']=$_SESSION['cfirstname']=$_SESSION['clastname']=$_SESSION['caddress']=$_SESSION['cemail']=$_SESSION['cphoneNo']=$_SESSION['cbundle']="";
+$_SESSION['bundlename']=$_SESSION['bundlesize']=$_SESSION['description']=$_SESSION["duration"]="";
 if(isset($_POST['CreateCustomer'])){CreateCustomer();}
+if(isset($_POST['CreateBundle'])){CreateBundle();}
 function CreateCustomer()
 {
     //Validation
@@ -98,6 +100,16 @@ function EditCustomer()
 
 function CreateBundle()
 {
+    $bundlename =$_SESSION['bundlename'] = $_REQUEST['bundlename'];  
+    $bundlesize =$_SESSION['bundlesize'] = $_REQUEST['bundlesize'];
+    $duration = $_SESSION['duration'] = $_REQUEST['duration'];
+    $description = $_SESSION['description'] = $_REQUEST['description'];
+    if(!preg_match("/^[1-9][0-9]{0,3}$/",$duration))
+    {
+        $_SESSION['error']= "Duration should be between 0-999 Days";
+        $_SESSION['duration']="";
+    }
+    else{
     global $db;
     // $Name = "NewBundle"; $Description= "FirstBundle"; $BundleSize="30"; $Duration="30";
     $query = "SELECT * FROM bundles_tb ORDER BY BundleId DESC LIMIT 1 ";
@@ -112,7 +124,7 @@ function CreateBundle()
         if($count == 0)
         {
             $newId = 00001;
-            $query = "INSERT INTO bundles_tb (BundleId , Name,Description,BundleSize,Duration) VALUES('$newId','$Name','$Description','$BundleSize', '$Duration')";
+            $query = "INSERT INTO bundles_tb (BundleId , Name,Description,BundleSize,Duration) VALUES('$newId','$bundlename','$description','$bundlesize', '$duration')";
             $result = mysqli_query($db, $query);
             if(!$result)
             {
@@ -123,12 +135,12 @@ function CreateBundle()
                 $_SESSION["error"] = "Success";
             }
         }
-        else if($count == 1)
+        else if($count >= 1)
         {
             $details = mysqli_fetch_assoc($result);
             $prevId = $details['BundleId'];
             $newId = $prevId + 1;
-            $query = "INSERT INTO bundles_tb (BundleId, Name,Description,BundleSize,Duration) VALUES('$newId','$Name','$Description','$BundleSize', '$Duration')";
+            $query = "INSERT INTO bundles_tb (BundleId, Name,Description,BundleSize,Duration) VALUES('$newId','$bundlename','$description','$bundlesize', '$duration')";
             $result = mysqli_query($db, $query);
             if(!$result)
             {
@@ -136,10 +148,12 @@ function CreateBundle()
             }
             else
             {
-                $_SESSION["error"] = "Success";
+                $_SESSION['bundlename']=$_SESSION['bundlesize']=$_SESSION['description']=$_SESSION["duration"]="";
+                $_SESSION["error"] = "Successful";
             }
         }
     }    
+}
 }
 
 function ViewBundles()

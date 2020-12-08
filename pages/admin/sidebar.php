@@ -26,7 +26,7 @@
           <svg>
             <use xlink:href="#users"></use>
           </svg>
-          <span>View User</span>
+          <span>View Users</span>
         </a>
       </li>
       <li>
@@ -38,7 +38,7 @@
           </a>
       </li>
       <li>
-        <a href="#0">
+        <a href="editbundle.php">
           <svg>
             <use xlink:href="#collection"></use>
           </svg>
@@ -54,11 +54,11 @@
         </a>
       </li>
       <li>
-        <a href="#0">
+        <a href="editcustomer.php">
           <svg>
             <use xlink:href="#appearance"></use>
           </svg>
-          <span>Edit Profile</span>
+          <span>Edit Users</span>
         </a>
       </li>
       <li class="menu-heading">

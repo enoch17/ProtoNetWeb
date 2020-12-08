@@ -54,23 +54,15 @@
         </a>
       </li>
       <li>
-        <a href="editcustomer.php">
-          <svg>
-            <use xlink:href="#appearance"></use>
-          </svg>
-          <span>Edit Users</span>
-        </a>
-      </li>
-      <li class="menu-heading">
-        <h3>Settings</h3>
-      </li>
-      <li>
         <a href="#0">
           <svg>
             <use xlink:href="#settings"></use>
           </svg>
-          <span>Settings</span>
+          <span>View Transactions</span>
         </a>
+      </li>
+      <li class="menu-heading">
+        <h3>Settings</h3>
       </li>
          <li>
         <a href="#0">

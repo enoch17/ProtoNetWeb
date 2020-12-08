@@ -197,19 +197,6 @@ body {
   color: var(--page-content-txtColor);
   background: var(--page-content-bgColor);
 }
-
-.search-and-user {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  grid-column-gap: 50px;
-  align-items: center;
-  background: var(--page-content-bgColor);
-  margin-bottom: 10px;
-}
-
-.search-and-user form {
-  position: relative;
-}
 .btn-group button {
   background-color: var(--page-header-bgColor);
   height: 60px;
@@ -543,7 +530,7 @@ input[type="password"]:focus {
 
 input[type="submit"] {
   margin-top: 28px;
-  width: 80px;
+  width: 120px;
   height: 50px;
   background: #242e42;
   border: none;

@@ -1,9 +1,11 @@
 <?php
 $Bundles = $Customers = $ActiveCustomers = $InActiveCustomers =[];
-$_SESSION['cusername']=$_SESSION['cpassword']=$_SESSION['cfirstname']=$_SESSION['clastname']=$_SESSION['caddress']=$_SESSION['cemail']=$_SESSION['cphoneNo']=$_SESSION['cbundle']="";
+$_SESSION['error']=$_SESSION['cusername']=$_SESSION['cpassword']=$_SESSION['cfirstname']=$_SESSION['clastname']=$_SESSION['caddress']=$_SESSION['cemail']=$_SESSION['cphoneNo']=$_SESSION['cbundle']="";
 $_SESSION['bundlename']=$_SESSION['bundlesize']=$_SESSION['description']=$_SESSION["duration"]="";
 if(isset($_POST['CreateCustomer'])){CreateCustomer();}
 if(isset($_POST['CreateBundle'])){CreateBundle();}
+if(isset($_GET['Id'])){ViewBundles();PreEditBundle();}
+if(isset($_POST['EditBundle'])){EditBundle();}
 function CreateCustomer()
 {
     //Validation
@@ -177,5 +179,53 @@ function ViewBundles()
             $i = $i +1;
         }
     }
-} 
+}
+
+function PreEditBundle()
+{
+    ViewBundles();
+    global $Bundles;
+    $Id = $_GET['Id'];
+    foreach($Bundles as $a)
+    {
+        if($a['BundleId'] == $Id)
+        {
+            $_SESSION['InitBundleId']= $Id;
+            $_SESSION['bundlename'] = $a['Name'];
+            $_SESSION['bundlesize']= $a['BundleSize'];
+            $_SESSION['duration']= $a['Duration'];
+            $_SESSION['description']=$a['Description'];
+        }
+    }
+}
+function EditBundle()
+{
+    $Id = $_SESSION['InitBundleId'];
+    $bundlename =$_SESSION['bundlename'] = $_REQUEST['bundlename'];  
+    $bundlesize =$_SESSION['bundlesize'] = $_REQUEST['bundlesize'];
+    $duration = $_SESSION['duration'] = $_REQUEST['duration'];
+    $description = $_SESSION['description'] = $_REQUEST['description'];
+    if(!preg_match("/^[1-9][0-9]{0,3}$/",$duration))
+    {
+        $_SESSION['error']= "Duration should be between 0-999 Days";
+        $_SESSION['duration']="";
+    }
+    else
+    {
+        global $db;
+        $query = "UPDATE bundles_tb SET Name='$bundlename', Description='$description', BundleSize='$bundlesize',Duration='$duration' WHERE BundleId = '$Id'";
+        $result = mysqli_query($db, $query);
+            if(!$result)
+            {
+                $_SESSION["error"] = "Error Updating Bundles";
+            }
+            else
+            {
+                $_SESSION['bundlename']=$_SESSION['bundlesize']=$_SESSION['description']=$_SESSION["duration"]="";
+                $_SESSION["error"] = "Successful";
+                echo "<script>alert('Successful')</script>";
+                echo '<script>window.location="../admin/viewbundles.php"</script>';
+            }
+        }
+}   
 ?>

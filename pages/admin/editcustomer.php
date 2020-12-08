@@ -9,7 +9,7 @@ ViewBundles();
 <div id="login-box">
     <div class="left">
         <h1>EDIT USER</h1>
-        <form method="post" action="createcustomer.php">
+        <form method="post" action="editcustomer.php">
             <input type="text" name="username" placeholder="Edit Username" value="<?php echo $_SESSION['cusername']?>" required/>
             <input type="text" name="firstname" placeholder="Edit First Name" value="<?php echo $_SESSION['cfirstname']?>" required/>
             <input type="text" name="lastname" placeholder="Edit Last Name" value="<?php echo $_SESSION['clastname']?>" required/>
@@ -22,7 +22,7 @@ ViewBundles();
            
             <p id="Error"><?php if($_SESSION['error']!="Successful"){echo $_SESSION['error'];}?></p>
             <p id="Success"><?php if($_SESSION['error']=="Successful"){echo "Successful";}?></p>
-            <input type="submit" name="CreateCustomer" value="Edit User" />
+            <input type="submit" name="EditCustomer" value="Edit User" />
         </form>
     </div>
 <!-- html ends here -->

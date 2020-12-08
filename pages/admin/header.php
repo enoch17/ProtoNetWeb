@@ -4,6 +4,7 @@
   <title>ProntoNet</title>
   <link rel="shortcut icon" href="https://png.pngtree.com/png-clipart/20190904/original/pngtree-internet-icon-png-image_4467503.jpg"/>
 	<link rel="stylesheet" type="text/css" href="css/Index.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <script src="js/Index.js"></script>
 <body>

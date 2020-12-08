@@ -11,5 +11,5 @@
         "(" . mysqli_connect_errno() . ")";
         $_SESSION['error']="Error Connecting to db";
     }
-
+    
 ?>

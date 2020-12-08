@@ -22,7 +22,7 @@
         </a>
       </li>
       <li>
-        <a href="#0">
+        <a href="viewcustomers.php">
           <svg>
             <use xlink:href="#users"></use>
           </svg>
@@ -38,11 +38,11 @@
           </a>
       </li>
       <li>
-        <a href="editbundle.php">
+        <a href="viewbundles.php">
           <svg>
             <use xlink:href="#collection"></use>
           </svg>
-          <span>Edit Bundle</span>
+          <span>View Bundles</span>
         </a>
       </li>
       <li>
@@ -83,7 +83,7 @@
       <li>
       
       <li>
-        <a href="#0">
+        <a href="logout.php">
           <svg>
             <use xlink:href="#options"></use>
           </svg>

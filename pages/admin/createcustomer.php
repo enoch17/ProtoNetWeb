@@ -1,5 +1,6 @@
 <?php   
 require_once "../../includes/connection.php";
+if($_SESSION['LoggedIn']==false){header("Location: ../../Index.php", true, 301);}
 require "header.php";
 require "sidebar.php";
 require_once "../../includes/adminprocessing.php";

@@ -1,5 +1,5 @@
 <?php
-$_SESSION["error"]=$_SESSION["username"]="";
+$_SESSION["error"]=$_SESSION["username"]=$_SESSION["LoggedIn"]="";
 if(isset($_POST['Login'])){formValidation();}
 if(isset($_POST['logoutUser'])){logOut();}
 
@@ -36,6 +36,7 @@ function loginUser($username,$password)
         {
             $details = mysqli_fetch_assoc($result);
             $type = $details['Type'];
+            $_SESSION['LoggedIn']=true;
             if($type == "Customer")
             {
                 header("Location: ./pages/customer/dashboard.php", true, 301);

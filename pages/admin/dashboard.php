@@ -1,5 +1,6 @@
 <?php
 session_start();
+if($_SESSION['LoggedIn']==false){header("Location: ../../Index.php", true, 301);}
 require "header.php";
 require "sidebar.php";?>
 <!-- Html goes here -->
@@ -15,6 +16,6 @@ require "sidebar.php";?>
 </div>
 
 <!-- html ends here -->
-<?
+<?php
 require "footer.php";
 ?>

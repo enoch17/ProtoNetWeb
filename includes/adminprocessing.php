@@ -1,6 +1,6 @@
 <?php
 $_SESSION['error']="";
-$Bundles = $Customers = $ActiveCustomers = $InActiveCustomers = $BIdndName=[];
+$Bundles = $Customers = $ActiveCustomers = $InActiveCustomers = $BIdndName= $Transactions=[];
 if(isset($_POST['CreateCustomer'])){CreateCustomer();}
 if(isset($_POST['CreateBundle'])){CreateBundle();}
 if(isset($_GET['Id'])){ViewBundles();PreEditBundle();}
@@ -9,7 +9,6 @@ if(isset($_POST['EditBundle'])){EditBundle();}
 if(isset($_POST['EditCustomer'])){EditCustomer();}
 function CreateCustomer()
 {
-    $_SESSION['cusername']=$_SESSION['cpassword']=$_SESSION['cfirstname']=$_SESSION['clastname']=$_SESSION['caddress']=$_SESSION['cemail']=$_SESSION['cphoneNo']=$_SESSION['cbundle']="";
     //Validation
     $username =$_SESSION['cusername'] = $_REQUEST['username'];  
     $password =$_SESSION['cpassword'] = $_REQUEST['password'];
@@ -173,7 +172,6 @@ function EditCustomer()
 
 function CreateBundle()
 {
-    $_SESSION['bundlename']=$_SESSION['bundlesize']=$_SESSION['description']=$_SESSION["duration"]="";
     $bundlename =$_SESSION['bundlename'] = $_REQUEST['bundlename'];  
     $bundlesize =$_SESSION['bundlesize'] = $_REQUEST['bundlesize'];
     $duration = $_SESSION['duration'] = $_REQUEST['duration'];
@@ -300,5 +298,28 @@ function EditBundle()
                 echo '<script>window.location="../admin/viewbundles.php"</script>';
             }
         }
-}   
+} 
+
+function ViewTransactions()
+{
+    global $db;
+    global $Transactions;
+    $query = "SELECT * FROM transactions_tb  ";
+    $result = mysqli_query($db, $query);
+    if(!$result)
+    {
+        $_SESSION["error"] = "Error Retrieving Bundles";
+    }
+    else
+    {
+        $i = 0;
+        $count = mysqli_num_rows($result);
+        while($i<$count)
+        {
+            $details = mysqli_fetch_assoc($result);
+            $Transactions[$i] =$details;
+            $i = $i +1;
+        }
+    }
+}
 ?>

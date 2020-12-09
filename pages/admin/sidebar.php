@@ -54,7 +54,7 @@
         </a>
       </li>
       <li>
-        <a href="#0">
+        <a href="viewtransactions.php">
           <svg>
             <use xlink:href="#settings"></use>
           </svg>

@@ -73,7 +73,8 @@ svg {
   padding-top: 20px;
   width: var(--page-header-width);
   color: var(--page-header-txtColor);
-  background: var(--page-header-bgColor);
+  background-image: linear-gradient(to right, purple, red);
+  /* background: var(--page-header-bgColor); */
 }
 
 /*In case you prefer an absolutely positioned header that covers the full page height, add these styles*/
@@ -173,12 +174,13 @@ svg {
 .page-header .admin-menu button:hover,
 .page-header .admin-menu button:focus {
   background: var(--page-header-bgColor-hover);
-  color: var(--blue);
+  background-image: linear-gradient(to right, rgb(94, 2, 94), rgb(114, 3, 3));
+  /* color: var(--blue); */
   outline: none;
 }
 
-.page-header .admin-menu a:hover svg,
-.page-header .admin-menu a:focus svg,
+/* .page-header .admin-menu a:hover svg,
+.page-header .admin-menu a:focus svg, */
 .page-header .admin-menu button:hover svg,
 .page-header .admin-menu button:focus svg {
   fill: var(--blue);
@@ -197,7 +199,8 @@ svg {
   background: var(--page-content-bgColor);
 }
 .btn-group button {
-  background-color: var(--page-header-bgColor);
+  /* background-color: var(--page-header-bgColor); */
+  background-image: linear-gradient(to right, purple, red);
   height: 60px;
   width: 150px;  
   border: 50px blue; 
@@ -220,7 +223,8 @@ svg {
 
 
 .btn-group button:hover {
-  background-color: rgb(63, 48, 97);
+  /* background-color: rgb(63, 48, 97); */
+  background-image: linear-gradient(to right, rgb(94, 2, 94), rgb(114, 3, 3));
 }
 
 .search-and-user input[type="search"] {

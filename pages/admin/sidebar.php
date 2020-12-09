@@ -65,7 +65,7 @@
         <h3>Settings</h3>
       </li>
          <li>
-        <a href="#0">
+        <a href="dashboard.php">
           <svg>
             <use xlink:href="#charts"></use>
           </svg>

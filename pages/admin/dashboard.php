@@ -10,9 +10,9 @@ ViewCustomers();
 <div class="btn-group">
     <table style="width: 100%">
         <tr>
-            <td><button>Users :<?php echo count($Customers)?></button></td>
-            <td><button>Active Users :<?php echo count($ActiveCustomers)?></button></td>
-            <td><button>Inactive Users:<?php echo count($InActiveCustomers)?></button></td>
+            <td><button>Users <br><?php echo count($Customers)?></button></td>
+            <td><button>Active Users <br><?php echo count($ActiveCustomers)?></button></td>
+            <td><button>Inactive Users<br><?php echo count($InActiveCustomers)?></button></td>
             <td><button>Total Data Usage</button></td>
         </tr>
     </table>

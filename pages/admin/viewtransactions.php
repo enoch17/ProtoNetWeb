@@ -9,7 +9,7 @@ ViewTransactions();
 <!-- Html goes here -->
 <section>
     <div class="table-title">
-        <h2>Transaction Details</h2>
+        <h2 style = "color:black;">Transaction Details</h2>
         <div class="search-box">
             <i class="material-icons">&#xE8B6;</i>
             <input type="text" class="form-control" placeholder="Search&hellip;" onkeydown="searchtransaction()" id='search'>

@@ -206,7 +206,7 @@ svg {
   /* width: 150px;   */
   width: 100%;
   border: 50px blue; 
-  color: white; 
+  color:red; 
   /* padding: 10px 24px;  */
   cursor: pointer; 
   float: center; 
@@ -265,6 +265,7 @@ svg {
 
 .search-and-user .admin-profile .greeting {
   margin: 0 10px 0 20px;
+  color: var(--red);
 }
 
 .search-and-user .admin-profile svg {

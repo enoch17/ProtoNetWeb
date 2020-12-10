@@ -1,7 +1,7 @@
 /* RESET RULES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 @import url("https://fonts.googleapis.com/css?family=Lato:400,700&display=swap");
-* { border: 1px solid red; }
+/* * { border: 1px solid red; } */
 :root {
   --page-header-bgColor: #242e42;
   --page-header-bgColor-hover: #1d2636;

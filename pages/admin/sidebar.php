@@ -24,6 +24,7 @@
       <li>
         <a href="viewcustomers.php">
           <svg>
+          
             <use xlink:href="#users"></use>
           </svg>
           <span>View Users</span>

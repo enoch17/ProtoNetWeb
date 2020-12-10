@@ -1,7 +1,7 @@
 <header class="page-header">
   <nav>
     <a href="#0">
-    <img class="logo" src= "logo" src="https://png.pngtree.com/png-clipart/20190904/original/pngtree-internet-icon-png-image_4467503.jpg" alt="prontonet logo">
+    <img class="logo" src="" alt="prontonet logo">
     </a>
     <button class="toggle-mob-menu" aria-expanded="false" aria-label="open menu">
       <svg width="20" height="20" aria-hidden="true">

@@ -10,7 +10,7 @@ ViewBundles();
 <!-- Html goes here -->
 <div id="login-box">
     <div class="left">
-        <h1>CREATE USER</h1>
+        <h1 style = "color: black;">CREATE USER</h1>
         <form method="post" action="createcustomer.php">
             <input type="text" name="username" placeholder="Username" value="<?php echo $_SESSION['cusername']?>" required/>
             <input type="text" name="firstname" placeholder="First Name" value="<?php echo $_SESSION['cfirstname']?>" required/>

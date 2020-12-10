@@ -10,7 +10,7 @@ ViewBundles();
 <!-- Html goes here -->
 <div id="login-box">
     <div class="left">
-        <h1>CREATE BUNDLE</h1>
+        <h1 style = "color: black;">CREATE BUNDLE</h1>
         <form method="post" action="createbundle.php">
             <input type="text" name="bundlename" placeholder="Bundle Name" value="<?php echo $_SESSION['bundlename']?>" required/>
             <input type="text" name="bundlesize" placeholder="Bundle Size" value="<?php echo $_SESSION['bundlesize']?>" required/>

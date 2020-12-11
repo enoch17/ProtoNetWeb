@@ -4,6 +4,8 @@ function MakeReport()
 {
     echo "Running";
     $report = $_REQUEST['report'];
+    $comment = $_REQUEST['comment'];
+    $report = $report.': '.$comment;
     $username = $_SESSION['username'];
     $datendtime = date('Y-m-d H:i:s');
     global $db;

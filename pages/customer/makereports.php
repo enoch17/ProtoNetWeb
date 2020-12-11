@@ -1,10 +1,19 @@
-<html>
-    <form action="" method= "post">
-        <label>FULL NAME: <br><input type="text" name="name"><br></label>
-        <label>USER NAME: <br><input type="text" name="name"><br></label>
-        <label>E-MAIL: <br><input type="text" name="email"><br></label>
-        <label>PHONE NUMBER: <br><input type="text" name="phonenumber"><br></label>
-        <label>MESSAGE: <br><textarea cols="35" rows="5" name="mes"></textarea></label><br>
-        <input type="submit" name="post" value="SUBMIT">
-    </form>
-</html>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<div id="login-box">
+    <div class="left">
+        <h1 style = "color: black;">MAKE REPORTS</h1>
+        <form method="post" action="createbundle.php">
+            <input type="text" name="fullname" placeholder="FULL NAME" value="<?php echo $_SESSION['fullname']?>" required/>
+            <input type="text" name="username" placeholder="USER NAME" value="<?php echo $_SESSION['username']?>" required/>
+            <input type="text" name="email" placeholder="E MAIL" value="<?php echo $_SESSION['email']?>" required/>
+            <label>MESSAGE: <br><textarea cols="35" rows="5" name="mes"></textarea></label><br>
+            <input type="submit" name="CreateBundle" value="SEND REPORT" />
+           
+        </form>
+    </div>
+
+
+
+
+
+

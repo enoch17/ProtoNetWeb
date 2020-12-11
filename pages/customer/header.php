@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>ProntoNet</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="shortcut icon" href="https://png.pngtree.com/png-clipart/20190904/original/pngtree-internet-icon-png-image_4467503.jpg"/>
 </head>
 <body>
 <header class="page-header">
@@ -73,7 +74,7 @@
 <section class="page-content">
 <section class="search-and-user">
     <div class="admin-profile">
-      <span class="greeting"><?php echo $_SESSION['username']?></span>
+      <span class="greeting">Welcome <?php echo $_SESSION['username']?></span>
       
         <svg>
           <use xlink:href="#users"></use>

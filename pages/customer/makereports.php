@@ -1,7 +1,7 @@
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <div id="login-box">
     <div class="left">
-        <h1 style = "color: black;"></h1>
+        <h1 style = "color: #242e42; font-family: arial;">REPORT</h1>
         <form method="post" action="createbundle.php">
             <input type="text" name="fullname" placeholder="FULL NAME" value="<?php echo $_SESSION['fullname']?>" required/>
             <input type="text" name="username" placeholder="USER NAME" value="<?php echo $_SESSION['username']?>" required/>

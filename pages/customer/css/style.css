@@ -73,7 +73,8 @@ svg {
   padding-top: 20px;
   width: var(--page-header-width);
   color: var(--page-header-txtColor);
-  background: var(--page-header-bgColor);
+  background-image: linear-gradient(to right, purple, red);
+  /* background: var(--page-header-bgColor); */
 }
 
 /*In case you prefer an absolutely positioned header that covers the full page height, add these styles*/
@@ -114,7 +115,7 @@ svg {
   display: none;
   margin-left: 5px;
   padding: 4px;
-  background: var(--page-content-blockColor);
+  background: linear-gradient(to right, purple, red);
   border-radius: var(--border-radius);
 }
 
@@ -173,12 +174,13 @@ svg {
 .page-header .admin-menu button:hover,
 .page-header .admin-menu button:focus {
   background: var(--page-header-bgColor-hover);
-  color: var(--blue);
+  background-image: linear-gradient(to right, rgb(94, 2, 94), rgb(114, 3, 3));
+  /* color: var(--blue); */
   outline: none;
 }
 
-.page-header .admin-menu a:hover svg,
-.page-header .admin-menu a:focus svg,
+/* .page-header .admin-menu a:hover svg,
+.page-header .admin-menu a:focus svg, */
 .page-header .admin-menu button:hover svg,
 .page-header .admin-menu button:focus svg {
   fill: var(--blue);
@@ -197,12 +199,15 @@ svg {
   background: var(--page-content-bgColor);
 }
 .btn-group button {
-  background-color: var(--page-header-bgColor);
+  /* background-color: var(--page-header-bgColor); */
+  background-color: purple;
+  /* background-image: linear-gradient(to right,purple, red); */
   height: 60px;
-  width: 150px;  
+  /* width: 150px;   */
+  width: 100%;
   border: 50px blue; 
-  color: white; 
-  padding: 10px 24px; 
+  color:whitesmoke; 
+  /* padding: 10px 24px;  */
   cursor: pointer; 
   float: center; 
 }
@@ -220,7 +225,8 @@ svg {
 
 
 .btn-group button:hover {
-  background-color: rgb(63, 48, 97);
+  /* background-color: rgb(63, 48, 97); */
+  background-image: linear-gradient(to right, rgb(94, 2, 94), rgb(114, 3, 3));
 }
 
 .search-and-user input[type="search"] {
@@ -259,6 +265,7 @@ svg {
 
 .search-and-user .admin-profile .greeting {
   margin: 0 10px 0 20px;
+  color: var(--red);
 }
 
 .search-and-user .admin-profile svg {
@@ -438,7 +445,7 @@ svg {
 }
 
 td{
-  padding : 2%;
+  padding : 1%;
 }
 
 button{

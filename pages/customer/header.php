@@ -10,16 +10,13 @@
     <a href="#0">
       <img class="logo" src= "logo" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/vertical-logo.svg" alt="prontonet logo">
     </a>
-    <button class="toggle-mob-menu" aria-expanded="false" aria-label="open menu">
+    <button class="toggle-mob-menu"  style="background-image:linear-gradient(to right, purple, red);" aria-expanded="false" aria-label="open menu">
       <svg width="20" height="20" aria-hidden="true">
         <use xlink:href="#down"></use>
       </svg>
     </button>
     
-    <ul class="admin-menu">
-      <li class="menu-heading">
-        <h3></h3>
-      </li>
+    <ul class="admin-menu" style="background-image:linear-gradient(to right, purple, red);">
       <li>
         <a href="">
           <span>User Profile</span>
@@ -35,8 +32,10 @@
           <span>Make Payments</span>
         </a>
       </li>
-      <li class="menu-heading">
-        <h3></h3>
+      <li>
+        <a href="makereports.php">
+          <span>Make Reports</span>
+        </a>
       </li>
          <li>
         <a href="#0">

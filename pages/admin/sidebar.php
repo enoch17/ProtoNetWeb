@@ -10,9 +10,7 @@
     </button>
     
     <ul class="admin-menu">
-      <li class="menu-heading">
-        <h3>Admin</h3>
-      </li>
+
       <li>
         <a href="createcustomer.php">
           <svg>
@@ -62,9 +60,7 @@
           <span>View Transactions</span>
         </a>
       </li>
-      <li class="menu-heading">
-        <h3>Settings</h3>
-      </li>
+
          <li>
         <a href="dashboard.php">
           <svg>

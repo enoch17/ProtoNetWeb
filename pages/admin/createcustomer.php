@@ -21,7 +21,7 @@ ViewBundles();
             <input type="text" name="password" placeholder="Initial Password" value="<?php echo $_SESSION['cpassword']?>" required/>
 
             <p>
-                <label>Select Bundle</label>
+                <label style="color:black;">Select Bundle
                 <select id="bundle" name="bundle">
                     <option value="0">None</option>
                     <?php foreach($Bundles as $a)
@@ -29,6 +29,7 @@ ViewBundles();
                         echo "<option value='".$a['BundleId']."'>".$a['Name']."</option>";
                     }
                 ?>
+                </label>
                 </select>
             </p>
             <p id="Error"><?php if($_SESSION['error']!="Successful"){echo $_SESSION['error'];}?></p>

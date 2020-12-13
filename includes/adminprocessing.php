@@ -204,7 +204,7 @@ function CreateBundle()
             }
             else
             {
-                $_SESSION["error"] = "Success";
+                $_SESSION["error"] = "Successful";
             }
         }
         else if($count >= 1)

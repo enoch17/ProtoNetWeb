@@ -2,7 +2,6 @@
 if(isset($_POST['MakeReport'])){MakeReport();}
 function MakeReport()
 {
-    echo "Running";
     $report = $_REQUEST['report'];
     $comment = $_REQUEST['comment'];
     $report = $report.': '.$comment;

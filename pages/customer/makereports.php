@@ -5,11 +5,8 @@
 ?>
 <div id="login-box">
     <div class="left">
-        <h1 style = "color: #242e42; font-family: arial;">REPORT</h1>
-        <form method="post" action="createbundle.php">
-            <input type="text" name="fullname" placeholder="FULL NAME" value="<?php echo $_SESSION['fullname']?>" required/>
-            <input type="text" name="username" placeholder="USER NAME" value="<?php echo $_SESSION['username']?>" required/>
-            <input type="text" name="email" placeholder="E MAIL" value="<?php echo $_SESSION['email']?>" required/>
+        <h1 style="color: black;"></h1>
+        <form method="post" action="makereports.php">
             <label for="comment">SELECT A REPORT:</label>
 
             <select name="report" id="report">

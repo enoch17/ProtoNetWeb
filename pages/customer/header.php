@@ -18,14 +18,19 @@
     </button>
     
     <ul class="admin-menu" style="background-image:linear-gradient(to right, purple, red);">
+    <li>
+        <a href="dashboard.php">
+          <span>Home</span>
+        </a>
+      </li>
       <li>
         <a href="">
           <span>User Profile</span>
         </a>
       </li>
       <li>
-        <a href="">
-          <span>Current Bundle</span>
+        <a href="subscribe.php">
+          <span>SUBSCRIBE</span>
         </a>
       </li>
       <li>

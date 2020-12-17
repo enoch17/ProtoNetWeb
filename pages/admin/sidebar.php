@@ -10,6 +10,14 @@
     </button>
     
     <ul class="admin-menu">
+    <li>
+        <a href="dashboard.php">
+          <svg>
+            <use xlink:href="#pages"></use>
+          </svg>
+          <span>Home</span>
+        </a>
+      </li>
 
       <li>
         <a href="createcustomer.php">

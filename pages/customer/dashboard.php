@@ -11,26 +11,28 @@
 </head>
 <body>
 <table style="width: 100%">
+<tr>
   	<!-- Hover #1 -->
-<div class="box-1">
+<td><div class="box-1">
   <div class="btn btn-one">
     <span>SUBSCRIBED PACKAGE</span>
   </div>
-</div>
+</div></td>
  
 <!-- Hover #2 -->
-<div class="box-2">
+<td><div class="box-2">
   <div class="btn btn-two">
     <span>CANCEL SUBSCRIPTION</span>
   </div>
-</div>
+</div></td>
 
 <!-- Hover #3 -->
-<div class="box-3">
+<td><div class="box-3">
   <div class="btn btn-three">
     <span>SHARE SUBSCRIPTION</span>
   </div>
-</div>
+</div></td>
+</tr>
 </table>
 
 </body>

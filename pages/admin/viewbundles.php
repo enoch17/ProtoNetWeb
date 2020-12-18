@@ -28,6 +28,9 @@ ViewBundles();
                     <h3><b>Bundle Size</b></h3>
                 </td>
                 <td>
+                    <h3><b>Bundle Price</b></h3>
+                </td>
+                <td>
                     <h3><b>Duration</b></h3>
                 </td>
                 <td>

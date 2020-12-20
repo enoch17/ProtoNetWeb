@@ -28,6 +28,9 @@ ViewBundles();
                     <h3><b>Bundle Size</b></h3>
                 </td>
                 <td>
+                    <h3><b>Bundle Cost</b></h3>
+                </td>
+                <td>
                     <h3><b>Duration</b></h3>
                 </td>
                 <td>
@@ -43,6 +46,7 @@ ViewBundles();
                         echo "<td>".$a['Name']."</td>";
                         echo "<td>".$a['Description']."</td>";
                         echo "<td>".$a['BundleSize']."</td>";
+                        echo "<td>".$a['BundleCost']."</td>";
                         echo "<td>".$a['Duration']."</td>";
                         echo "<td>
                         <a href='editbundle.php?Id=".$id."' class='edit' title='Edit' data-toggle='tooltip'><i class='material-icons'>&#xE254;</i></a>

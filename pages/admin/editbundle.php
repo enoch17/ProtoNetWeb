@@ -8,7 +8,7 @@ require_once "../../includes/adminprocessing.php";
 <!-- Html goes here -->
 <div id="login-box">
     <div class="left">
-        <h1>EDIT BUNDLE</h1>
+        <h1 style= color: black;>EDIT BUNDLE</h1>
         <form method="post" action="editbundle.php">
             <input type="text" name="bundlename" placeholder="Bundle Name" value="<?php echo $_SESSION['bundlename']?>"
                 required />

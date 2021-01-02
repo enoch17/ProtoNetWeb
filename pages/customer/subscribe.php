@@ -1,99 +1,60 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-		<link rel="stylesheet" type="text/css" href="css/style3.css">
-</head>
-<body>
-<h2 style="font-family:arial;">SUBSCRIBE TO A PACKAGE</h2>
-<div class="custom-select" style="width:200px;">
-  <select>
-    <option value="0">Select Bundle:</option>
-    <option value="1">MINI BUNDLE</option>
-    <option value="2">MEGA BUNDLE</option>
-    <option value="3">ULTRA BUNDLE</option>
-  </select>
-</div>
-<script>
-var x, i, j, l, ll, selElmnt, a, b, c;
-/*look for any elements with the class "custom-select":*/
-x = document.getElementsByClassName("custom-select");
-l = x.length;
-for (i = 0; i < l; i++) {
-  selElmnt = x[i].getElementsByTagName("select")[0];
-  ll = selElmnt.length;
-  /*for each element, create a new DIV that will act as the selected item:*/
-  a = document.createElement("DIV");
-  a.setAttribute("class", "select-selected");
-  a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
-  x[i].appendChild(a);
-  /*for each element, create a new DIV that will contain the option list:*/
-  b = document.createElement("DIV");
-  b.setAttribute("class", "select-items select-hide");
-  for (j = 1; j < ll; j++) {
-    /*for each option in the original select element,
-    create a new DIV that will act as an option item:*/
-    c = document.createElement("DIV");
-    c.innerHTML = selElmnt.options[j].innerHTML;
-    c.addEventListener("click", function(e) {
-        /*when an item is clicked, update the original select box,
-        and the selected item:*/
-        var y, i, k, s, h, sl, yl;
-        s = this.parentNode.parentNode.getElementsByTagName("select")[0];
-        sl = s.length;
-        h = this.parentNode.previousSibling;
-        for (i = 0; i < sl; i++) {
-          if (s.options[i].innerHTML == this.innerHTML) {
-            s.selectedIndex = i;
-            h.innerHTML = this.innerHTML;
-            y = this.parentNode.getElementsByClassName("same-as-selected");
-            yl = y.length;
-            for (k = 0; k < yl; k++) {
-              y[k].removeAttribute("class");
-            }
-            this.setAttribute("class", "same-as-selected");
-            break;
-          }
-        }
-        h.click();
-    });
-    b.appendChild(c);
-  }
-  x[i].appendChild(b);
-  a.addEventListener("click", function(e) {
-      /*when the select box is clicked, close any other select boxes,
-      and open/close the current select box:*/
-      e.stopPropagation();
-      closeAllSelect(this);
-      this.nextSibling.classList.toggle("select-hide");
-      this.classList.toggle("select-arrow-active");
-    });
-}
-function closeAllSelect(elmnt) {
-  /*a function that will close all select boxes in the document,
-  except the current select box:*/
-  var x, y, i, xl, yl, arrNo = [];
-  x = document.getElementsByClassName("select-items");
-  y = document.getElementsByClassName("select-selected");
-  xl = x.length;
-  yl = y.length;
-  for (i = 0; i < yl; i++) {
-    if (elmnt == y[i]) {
-      arrNo.push(i)
-    } else {
-      y[i].classList.remove("select-arrow-active");
-    }
-  }
-  for (i = 0; i < xl; i++) {
-    if (arrNo.indexOf(i)) {
-      x[i].classList.add("select-hide");
-    }
-  }
-}
-/*if the user clicks anywhere outside the select box,
-then close all select boxes:*/
-document.addEventListener("click", closeAllSelect);
-</script>
-
-</body>
-</html>
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <link rel="stylesheet" 
+              href= 
+"https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+              integrity= 
+"sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" 
+              crossorigin="anonymous" /> 
+  
+        <style> 
+            .my-menu { 
+/*Sets all the content of dropdown div to center*/ 
+                text-align: center;  
+            } 
+        </style> 
+    </head> 
+  
+    <body> 
+<!-- my-menu class is added to dropdown div for styling-->
+        <div class="dropdown my-menu"> 
+            <button class="btn btn-secondary  
+                           dropdown-toggle"  
+                    type="button"
+                    id="dropdownMenuButton" 
+                    data-toggle="dropdown" 
+                    aria-haspopup="true" 
+                    aria-expanded="false"> 
+                SELECT A BUNDLE
+            </button> 
+            <div class="dropdown-menu" 
+                 aria-labelledby="dropdownMenuButton"> 
+                <a class="dropdown-item" 
+                   href="#">MINI BUNDLE</a> 
+                <a class="dropdown-item" 
+                   href="#">MEGA BUNDLE</a> 
+                <a class="dropdown-item" 
+                   href="#">ULTRA BUNDLE</a> 
+            </div> 
+        </div> 
+  
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+                integrity= 
+"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" 
+                crossorigin="anonymous"> 
+      </script> 
+        <script src= 
+"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" 
+                integrity= 
+"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" 
+                crossorigin="anonymous"> 
+      </script> 
+        <script src= 
+"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+                integrity= 
+"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
+                crossorigin="anonymous"> 
+      </script> 
+    </body> 
+</html> 

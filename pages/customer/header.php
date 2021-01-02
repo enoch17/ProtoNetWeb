@@ -18,49 +18,48 @@
     </button>
     
     <ul class="admin-menu" style="background-image:linear-gradient(to right, purple, red);">
-    <li>
+    <li style="font-family:arial;">
         <a href="dashboard.php">
           <span>Home</span>
         </a>
       </li>
-      <li>
+      <li style="font-family:arial;">
         <a href="">
           <span>User Profile</span>
         </a>
       </li>
-      <li>
+      <li> <h6 style="font-family:arial;">
         <a href="subscribe.php">
           <span>SUBSCRIBE</span>
         </a>
+        </h6>
       </li>
-      <li>
+      <li> <h6 style="font-family:arial;">
         <a href="#0">
-          <span>Make Payments</span>
+          <span>MAKE PAYMENTS</span>
         </a>
+        </h6>
       </li>
-      <li>
+      <li style="font-family:arial;">
         <a href="makereports.php">
           <span>Make Reports</span>
         </a>
       </li>
-         <li>
+         <li style="font-family:arial;">
         <a href="#0">
           <span>Data Usage</span>
         </a>
-              <li>
+      <li style="font-family:arial;">
         <a href="#0">
           <span>Faq</span>
         </a>
       </li>
-            <li>
+      <li style="font-family:arial;">
         <a href="#0">
           <span>Contact Us</span>
         </a>
       </li>
-      </li>
-      <li>
-      
-      <li>
+      <li style="font-family:arial;">
         <a href="logout.php">
           <span>Log Out</span>
         </a>

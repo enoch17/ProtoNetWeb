@@ -117,7 +117,7 @@ ViewCustomers();
          <li data-ejeX='18'><i>Lagos Island</i></li>
          <li data-ejeX='45'><i>Apapa</i></li>
          <li data-ejeX='50'><i>Okota</i></li>
-         <li data-ejeX='33'><i>Lekki/Aja</i></li>
+         <li data-ejeX='33'><i>Lekki/Ajah</i></li>
        </ul>
     </div>
   </div>

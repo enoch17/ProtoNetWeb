@@ -51,7 +51,7 @@
         </a>
       <li style="font-family:arial;">
         <a href="#0">
-          <span>Faq</span>
+          <span>Faqs</span>
         </a>
       </li>
       <li style="font-family:arial;">

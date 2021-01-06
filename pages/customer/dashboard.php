@@ -1,8 +1,8 @@
 <?php
     session_start();
     require "header.php";
+    //nothing
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>

@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    require "header.php";
+    //nothing
+?>
 <!DOCTYPE html> 
 <html> 
     <head> 
@@ -36,7 +41,8 @@
                    href="#">MEGA BUNDLE</a> 
                 <a class="dropdown-item" 
                    href="#">ULTRA BUNDLE</a> 
-            </div> 
+            </div>
+
         </div> 
   
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
@@ -58,3 +64,4 @@
       </script> 
     </body> 
 </html> 
+<?require "footer.php"?>
